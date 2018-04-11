@@ -22,10 +22,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="third-party-api" />
+        <module name="crawler-webmagic" />
+        <module name="qiniu-upload" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="crawler-webmagic" target="1.5" />
+      <module name="qiniu-upload" target="1.5" />
       <module name="third-party-api" target="1.5" />
     </bytecodeTargetLevel>
   </component>

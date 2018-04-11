@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>qiniu-upload</module>
+        <module>crawler-webmagic</module>
     </modules>
 
 

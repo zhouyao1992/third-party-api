@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="qiniu-upload:war">
+    <output-path>$PROJECT_DIR$/qiniu-upload/target</output-path>
+    <root id="archive" name="qiniu-upload.war">
+      <element id="artifact" artifact-name="qiniu-upload:war exploded" />
+    </root>
+  </artifact>
+</component>
