@@ -58,7 +58,7 @@ public class UploadController {
 	
 	/**
 	 * 7牛云文件下载
-	 * @param path
+	 * @param filePath
 	 * @param response
 	 * @return
 	 */
