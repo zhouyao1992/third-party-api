@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+            http://www.springframework.org/schema/beans/spring-beans.xsd  
+			http://www.springframework.org/schema/context 
+			http://www.springframework.org/schema/context/spring-context.xsd
+    		http://www.springframework.org/schema/mvc 
+    		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+    		http://www.springframework.org/schema/aop 
+    		http://www.springframework.org/schema/aop/spring-aop.xsd ">
+
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+
+	<mvc:annotation-driven />
+
+	<context:component-scan base-package="com.huigu.controller" />
+
+	<bean id="jspviewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/page/" />
+		<property name="suffix" value="" />
+		<property name="order" value="0" />
+	</bean>
+
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="jsonMessageConverter"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="jsonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+	</bean>
+
+
+<!-- 上传文件解释器 -->
+  <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> 
+    <property name="defaultEncoding" value="utf-8" /> 
+    <property name="maxUploadSize" value="100485760" /> 
+    <property name="maxInMemorySize" value="4096" /> 
+    <property name="resolveLazily" value="true" /> 
+  </bean>
+  
+  
+</beans>

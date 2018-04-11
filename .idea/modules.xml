@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/qiniu-upload/qiniu-upload.iml" filepath="$PROJECT_DIR$/qiniu-upload/qiniu-upload.iml" />
       <module fileurl="file://$PROJECT_DIR$/third-party-api.iml" filepath="$PROJECT_DIR$/third-party-api.iml" />
     </modules>
   </component>
